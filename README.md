@@ -43,6 +43,7 @@ The backend is a server written in kotlin that acts as a middleman between the m
   "paymentId": "2",
   "redirectUrl": "http://localhost:8080/confirmmandate?id=2"
 }
+```
 3. The merchant redirects the shopper to the redirectUrl.
 4. The shopper confirms and signs the subscription creation transaction ![you_need_to_pay](https://github.com/rahimklaber/recurring_hackathon/assets/21971137/5634fe86-2698-41dc-a50c-c20e5af00a23)
 5. The server submits the transaction and the shopper is shown a success screen.
