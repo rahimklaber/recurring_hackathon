@@ -1,0 +1,32 @@
+[package]
+name = "recurring_hackathon"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[features]
+testutils = ["soroban-sdk/testutils"]
+
+
+[dependencies]
+soroban-sdk = "20.4.0"
+
+[dev_dependencies]
+soroban-sdk = { version = "20.4.0", features = ["testutils"] }
+
+
+[profile.release]
+opt-level = "z"
+overflow-checks = false
+debug = 0
+strip = "symbols"
+debug-assertions = false
+panic = "abort"
+codegen-units = 1
+lto = true
+
+[profile.release-with-logs]
+inherits = "release"
+debug-assertions = true

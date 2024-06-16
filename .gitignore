@@ -1,0 +1,7 @@
+contract/target
+contract/.soroban
+recurring/bin
+recurring/.idea
+recurring/.gradle
+recurring/build
+recurring/.kotlin

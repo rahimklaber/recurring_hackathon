@@ -1,0 +1,9 @@
+ktor:
+  application:
+    modules:
+      - rahimklaber.me.ApplicationKt.module
+  deployment:
+    port: 8080
+    watch:
+      - classes
+  development: true

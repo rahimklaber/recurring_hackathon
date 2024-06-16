@@ -1,0 +1,6 @@
+FROM openjdk:21
+EXPOSE 8080:8080
+RUN mkdir /app
+COPY ./build/install/recurring-shadow /app/
+WORKDIR /app/bin
+CMD ["./recurring"]
