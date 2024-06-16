@@ -24,7 +24,7 @@ The shopper can call create_mandate to create a subscription and give the contra
 The merchant can call charge_mandate every charge_interval seconds to charge the subscription. The function checks that charge_interval time has passed since the last charge.
 
 ### revoke_mandate
-revoke_mandate can be called by the shopper to cancell the subscription.
+revoke_mandate can be called by the shopper to cancel the subscription.
 
 ## Backend
 The backend is a server written in kotlin that acts as a middleman between the merchant and contract, the shopper and contract.
@@ -50,3 +50,7 @@ The backend is a server written in kotlin that acts as a middleman between the m
 5. The server submits the transaction and the shopper is shown a success screen.
 6. The server continiously checks if it should charge the subscription. If so It calls the `charge_mandate` contract function to charge the shopper for the subscription.
 
+## Run Backend
+1. clone https://github.com/rahimklaber/stellar_kt and run `./gradlew publishAllPublicationsToMavenLocalRepository`. The backend uses my sdk, which is not published, so we need to install it first.
+2. Clone this repo and cd into the `recurring`(backend) folder. then run `./gradlew run`.
+3. Config can be changed in `Config.kt`.
