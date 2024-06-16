@@ -1,4 +1,5 @@
 ## Contract
+Contract is deployed here https://stellar.expert/explorer/testnet/contract/CDHXNJXGVROYZYVGJ5Z6SW3MAJYNPBQMPB42LD76YXKWNKGOYM3OZGJP
 ```rust
 pub struct MandateConfig{
     pub amount: i128,
@@ -48,4 +49,4 @@ The backend is a server written in kotlin that acts as a middleman between the m
 4. The shopper confirms and signs the subscription creation transaction ![you_need_to_pay](https://github.com/rahimklaber/recurring_hackathon/assets/21971137/5634fe86-2698-41dc-a50c-c20e5af00a23)
 5. The server submits the transaction and the shopper is shown a success screen.
 6. The server continiously checks if it should charge the subscription. If so It calls the `charge_mandate` contract function to charge the shopper for the subscription.
-```
+
